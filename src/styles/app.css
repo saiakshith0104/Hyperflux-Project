@@ -1,0 +1,49 @@
+body {
+  background: #232324;
+}
+
+.notify {
+  background: #232324;
+  color: #f3f4f6;
+}
+
+
+#loader {
+  animation: loader 1s infinite ease-in-out;
+}
+
+@keyframes loader {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+section.history_tab {
+  pointer-events: none;
+}
+
+section.history_tab aside {
+  transform: translateX(100%);
+  transition: transform .3s;
+}
+
+section.history_tab._open > aside {
+  transform: translateX(0%);
+}
+
+section.history_tab._open {
+  pointer-events: all;
+}
+
+.tabs [aria-selected="false"]:hover {
+  background-color: #f3f4f61a;
+}
+
+.blure_layer {
+  opacity: 0;
+  transition: .2s;
+}
+
+section.history_tab._open .blure_layer {
+  opacity: 1;
+}
